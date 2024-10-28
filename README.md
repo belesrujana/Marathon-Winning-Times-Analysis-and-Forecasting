@@ -1,56 +1,78 @@
 
-Project Overview
-This project looks at past data from major marathons, focusing mainly on the Boston Marathon, to understand how winning times have changed over the years. The goal is to find trends in marathon performance and predict future winning times using advanced time series forecasting methods.
+# Marathon Winning Times Analysis and Forecasting
 
-Table of Contents
-Dataset
-Objectives
-Analysis Steps
-Data Cleaning
-Trend Analysis
-Country and Gender Analysis
-Time Series Forecasting
-Results
-How to Run the Project
-Conclusions
-Future Work
-Dataset
-The dataset includes historical winning times from major marathon events like the Boston, Berlin, and NYC marathons. It covers various years, genders, and countries, providing a broad look at marathon performances over time.
+This project explores historical data from major marathon events, with a primary focus on the Boston Marathon. The goal is to analyze trends in winning times, understand which countries and genders have dominated, and forecast future winning times using advanced time series models.
 
-File: world_marathon_majors.csv
-Columns:
-year: The year the marathon took place.
-winner: Name of the winner.
-gender: Winner’s gender.
-country: Winner’s country.
-time: Winning time for the marathon.
-marathon: The name of the marathon event.
-Objectives
-The main goals of this project are:
+## Table of Contents
 
-To look at how winning times in marathons have changed over the years.
-To identify which countries and genders have dominated marathon events.
-To predict future winning times for marathons using the ARIMA time series model.
-Analysis Steps
-Data Cleaning
-Loaded the dataset and removed rows with missing data to make sure the analysis was accurate.
-Converted the “time” column, which was in text format, to a time format that could be used for calculations.
-Trend Analysis
-Plotted winning times over the years to spot any trends.
-Found that winning times have generally gotten faster, especially after the 1980s, showing improvements in athlete performance and race conditions.
-Country and Gender Analysis
-Counted marathon wins by country to see which countries dominated.
-Also analyzed wins by gender to see how male and female athletes' performances have changed over time.
-Created bar charts to show total wins by country and cumulative wins over time.
-Time Series Forecasting
-Focused on the Boston Marathon and used the ARIMA model for time series analysis.
-Trained the model on past data to predict future winning times, including confidence intervals to show uncertainty in these predictions.
-Created visualizations to compare the model’s predictions with actual results, showing the predictions and confidence ranges.
-Results
-Trend Analysis: Winning times have become faster and more consistent over the years, especially after the 1980s. This shows better training, advances in sports science, and increased competition.
-Country and Gender Dominance: Some countries, like Kenya and Ethiopia, have been particularly successful in marathon running. The gap between male and female winning times has also decreased, reflecting the growing strength of female athletes.
-Forecasting: The ARIMA model successfully predicted future winning times for the Boston Marathon, with close matches to actual outcomes and confidence intervals to show prediction reliability.
-Conclusions
-Marathon performances have significantly improved over the years, and competition has increased.
-The ARIMA model proved to be a useful tool for predicting future winning times, offering accurate predictions with measurable uncertainty.
-These findings can be helpful for athletes, coaches, and organizers to understand past trends and plan for future performances.
+1. [Dataset](#dataset)
+2. [Objectives](#objectives)
+3. [Project Steps](#project-steps)
+4. [Results](#results)
+5. [Getting Started](#getting-started)
+6. [Conclusions](#conclusions)
+7. [Future Work](#future-work)
+
+## Dataset
+
+The dataset contains historical data from major marathons, including Boston, Berlin, and NYC marathons, covering various years, genders, and countries.
+
+- **File:** `world_marathon_majors.csv`
+- **Columns:**
+  - `year`: Year of the marathon event
+  - `winner`: Winner’s name
+  - `gender`: Winner’s gender
+  - `country`: Winner’s country
+  - `time`: Winning time in `HH:MM:SS` format
+  - `marathon`: Name of the marathon event
+
+## Objectives
+
+1. Analyze historical trends in winning times for different marathon events.
+2. Explore the dominance of countries and genders in these events.
+3. Forecast future marathon winning times, focusing on the Boston Marathon, using the ARIMA time series model.
+
+## Project Steps
+
+### 1. Data Cleaning
+- Removed rows with missing data to ensure accuracy.
+- Converted the `time` column to a format suitable for numerical analysis.
+
+### 2. Trend Analysis
+- Plotted historical winning times to identify trends and patterns.
+- Observed a steady decrease in winning times, especially from the 1980s onwards, showing the evolution in athlete performance.
+
+### 3. Country and Gender Analysis
+- Aggregated wins by country and gender to see which countries and genders have dominated over the years.
+- Visualizations, including bar charts, illustrate total wins by country and cumulative wins by gender over time.
+
+### 4. Time Series Forecasting
+- Used an ARIMA model to predict future winning times for the Boston Marathon.
+- Trained the model on past winning times and provided confidence intervals to show prediction reliability.
+
+## Results
+
+- **Trend Analysis**: Winning times have generally improved, especially post-1980s, due to advancements in training, competition, and sports science.
+- **Country and Gender Dominance**: Countries like Kenya and Ethiopia have led in marathon victories. The gender gap in winning times has narrowed, reflecting the increased competitiveness of female athletes.
+- **Forecasting**: The ARIMA model accurately predicted future winning times, with predictions aligning closely to actual times within confidence intervals.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.x
+- Required Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `statsmodels`
+
+
+
+## Conclusions
+
+This project highlights the improvement in marathon performances over the years, with countries like Kenya and Ethiopia leading in the sport. The forecasting model effectively predicts future winning times, providing valuable insights for athletes, coaches, and event organizers.
+
+## Future Work
+
+- Extend analysis to other major marathon events to compare trends.
+- Experiment with more advanced models like Prophet or machine learning methods.
+- Add more factors, like weather and course difficulty, to improve prediction accuracy.
+
+
